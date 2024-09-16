@@ -1,0 +1,86 @@
+1)To count the word frequency in given text
+
+import java.util.*;
+
+public class WordFrequencyCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the text: ");
+        String text = scanner.nextLine();
+
+        // Convert the text to lowercase to make comparisons case-insensitive
+        text = text.toLowerCase();
+
+        // Split the text into words using whitespace as the delimiter
+        String[] words = text.split("\\s+");
+
+        // Create a HashMap to store word frequencies
+        Map<String, Integer> wordFrequencyMap = new HashMap<>();
+
+        // Iterate through each word and update the frequency count
+        for (String word : words) {
+            if (wordFrequencyMap.containsKey(word)) {
+                wordFrequencyMap.put(word, wordFrequencyMap.get(word) + 1);
+            } else {
+                wordFrequencyMap.put(word, 1);
+            }
+        }
+
+        // Print the word frequencies
+        System.out.println("Word Frequencies:");
+        for (Map.Entry<String, Integer> entry : wordFrequencyMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+    }
+}
+
+
+2)The program for to check the given num is palindrome or not
+class Rev
+{
+	public static void main(String[] args) 
+	{
+		long num=26613131l;
+		long temp=num;
+		long rev=0;
+		for(;num>0;)
+		{
+		  long res=num%10;//fetching last digit
+		  rev=(rev*10)+res; 
+		  num=num/10; //removing the last digit
+
+		}
+		System.out.println(rev);
+		if (temp==rev){
+			System.out.println("the given num is palinrome");
+
+		}
+		else{
+			System.out.println("the given num is not palinrome");
+		}
+
+	}
+}
+
+
+3)the manipulation
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SquareNumbers {
+    public static void main(String[] args) {
+        // Create a list of numbers
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(8);
+        numbers.add(10);
+
+        // Print the squares of each number
+        System.out.println("Squares of the numbers:");
+        for (Integer number : numbers) {
+            System.out.println(number * number);
+        }
+    }
+}
